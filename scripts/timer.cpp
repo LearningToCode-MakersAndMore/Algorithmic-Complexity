@@ -2,13 +2,14 @@
 #include<vector>
 using namespace std;
 
-template<typename T>
-void timer(T func)
+template<typename T0, typename T1>
+void timer(T0 func, T1 arg)
 {
-*func << "hello";
+
+  *func << arg;
 
 }
 
 int main() {
-timer(&cout);
+  timer(&cout, 0);
 }

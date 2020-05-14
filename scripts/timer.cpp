@@ -2,8 +2,8 @@
 #include<vector>
 using namespace std;
 
-template<typename T0, typename T1>
-void timer(T0 func, T1 arg)
+template<typename T0, typename T1=int>
+void timer(T0 func, T1 arg=0)
 {
 
   *func << arg;
@@ -11,5 +11,5 @@ void timer(T0 func, T1 arg)
 }
 
 int main() {
-  timer(&cout, 0);
+  timer(&cout);
 }

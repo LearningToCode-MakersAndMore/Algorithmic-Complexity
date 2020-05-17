@@ -8,4 +8,5 @@ Code for timing algorithms and improving their efficiency specifically with rega
 
 ### Steps
 * Write function that can accept any function as an argument
-* Modify function to output time taking to execute the passed function. 
+* Add a second parameter to the existing function to pass the input parameter and have the input default to an empty array. 
+* Modify function to output time taken to execute the passed function.

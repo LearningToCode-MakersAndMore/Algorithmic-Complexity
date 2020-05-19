@@ -13,10 +13,12 @@ int timer(T0 func) {
   return duration;
 }
 
-template<typename T0, typename T1=void>
-void testFunc(T0 func, T1 funcParam ) {
-
-}
+// template<typename T0, typename T1=void>
+// void testFunc(T0 func, T1 funcParam ) {
+//   T0 (*)
+//   auto (T0::*)(T1 funcParam)
+//
+// }
 
 int foo() {
   cout << "hello";
@@ -24,8 +26,6 @@ int foo() {
 }
 
 int main() {
-  int (*bar)() = foo;
-
-  int test = timer(bar);
-  cout << test;
+  // int (*bar)() = cout;
+  cout << timer(foo);
 }

@@ -5,11 +5,11 @@ using namespace std;
 using namespace std::chrono;
 
 template<typename T0>
-double timer(T0 func) {
+int timer(T0 func) {
   auto start = high_resolution_clock::now();
   func();
   auto stop = high_resolution_clock::now();
-  double duration =  duration_cast<microseconds>(stop-start).count();
+  int duration =  duration_cast<microseconds>(stop-start).count();
   return duration;
 }
 
@@ -19,9 +19,8 @@ int foo() {
 }
 
 int main() {
-  auto banana = vector::size;
-  auto *bar = foo;
+  int (*bar)() = foo;
 
-  double test = timer(bar);
+  int test = timer(bar);
   cout << test;
 }

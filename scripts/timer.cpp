@@ -13,6 +13,11 @@ int timer(T0 func) {
   return duration;
 }
 
+template<typename T0, typename T1=void>
+void testFunc(T0 func, T1 funcParam ) {
+
+}
+
 int foo() {
   cout << "hello";
   return 2;

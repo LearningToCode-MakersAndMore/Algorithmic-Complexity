@@ -40,10 +40,17 @@ int main() {
   // b= &string::length;
   // cout << b;
   string bob = "hello";
-  typedef void (string::*MethodPtr)();
+  // typedef void (string::*MethodPtr)();
+  using MethodPtr = void (string::*)();
   MethodPtr method = &string::clear;
   (bob.*method)();
   cout << bob;
+  // cout << method;
+  // (bob->*method)();
+  // void (string::*method)() = &string::clear;
+  // // int method = &string::clear;
+  // bob.*method;
+  // cout << bob;
   // cout << bob;
   // testFunc(bob, method);
 }

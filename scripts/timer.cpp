@@ -10,7 +10,7 @@ using namespace std::chrono;
 //   auto start = high_resolution_clock::now();
 //   func();
 //   auto stop = high_resolution_clock::now();
-//   int duration =  duration_cast<microseconds>(stop-start).count();
+//   int duration = duration_cast<microseconds>(stop-start).count();
 //   return duration;
 // }
 
@@ -36,36 +36,4 @@ int foo() {
 int main() {
   string bob = "hello";
   testFunc(bob, &string::clear);
-
-  // string bob = "hello";
-  // // typedef void (string::*MethodPtr)();
-  // using MethodPtr = void (string::*)();
-  // MethodPtr method = &string::clear;
-  // (bob.*method)();
-  // cout << bob;
-
-  // int (*bar)() = cout;
-  // cout << timer(foo);
-  // string::size_type* (string::*method())() = string::length;
-  // string (string::*test)() = &(string::length);
-  // string* cat;
-  // testFunc(bob, cat->length());
-  // typedef void (string::*strMemPtr)();
-  // strMemPtr strMem = &string::clear;
-  // b= &string::length;
-  // cout << b;
-  // string bob = "hello";
-  // // typedef void (string::*MethodPtr)();
-  // using MethodPtr = void (string::*)();
-  // MethodPtr method = &string::clear;
-  // (bob.*method)();
-  // cout << bob;
-  // cout << method;
-  // (bob->*method)();
-  // void (string::*method)() = &string::clear;
-  // // int method = &string::clear;
-  // bob.*method;
-  // cout << bob;
-  // cout << bob;
-  // testFunc(bob, method);
 }

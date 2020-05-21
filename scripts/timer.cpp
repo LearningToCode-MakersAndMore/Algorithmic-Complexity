@@ -14,11 +14,11 @@ using namespace std::chrono;
 //   return duration;
 // }
 
-template<typename T0>
-using MethodPtr = void (T0::*)();
+template<typename R0, typename T0>
+using MethodPtr = R0 (T0::*)();
 
-template<typename T1>
-void testFunc(T1 object, MethodPtr<T1> method ) {
+template<typename T1, typename R1>
+void testFunc(T1 object, R1, MethodPtr<R1, T1> method ) {
   auto start = high_resolution_clock::now();
   cout << object;
   (object.*method)();
@@ -35,5 +35,11 @@ int foo() {
 
 int main() {
   string bob = "hello";
-  testFunc(bob, &string::clear);
+  // decltype(bob.size()) x;
+  auto x = &bob.size;
+  // cout << typeid(x).name();
+  // using Test = int (string::*)();
+  // Test abc = &string::size;
+  // cout << (bob.*abc)();
+  testFunc(bob, x, &string::size);
 }
